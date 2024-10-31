@@ -2,7 +2,7 @@
 A python project that can fetch your current Windows Spotlight wallpaper into your library.
 
 ## What it does
-Creates a new folder "Windows Spotlight" in your Pictures library & copied your current Spotlight wallpaper into that folder.
+Creates a new folder called "Windows Spotlight" in your Pictures library & copies your current Spotlight wallpaper into that folder.
 
 File naming format : **"Windows-Spotlight-{Current_date}_{index}.jpg"**  
 Index: Starts at 01 (and gets incremented if there is different wallpaper at same date).
