@@ -10,7 +10,7 @@ Index: Starts at 01 (and gets incremented if there is different wallpaper at sam
 ## Build for windows
 It is converted into Windows Executable using Python 3.12 and a library called Nuitka.
 
-## Executable from release (Latest: [v1.0.0](https://github.com/SeshuTarapatla/Fetch-Spotlight/releases/tag/v1.0.0))
+## Executable from release (Latest: [v1.0.1](https://github.com/SeshuTarapatla/Fetch-Spotlight/releases/latest))
 Windows Executable for the same source code:
 * Download EXE and execute.
 * It just opens a console and immediately closes once the process is complete.
