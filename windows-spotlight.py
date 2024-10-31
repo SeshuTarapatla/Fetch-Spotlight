@@ -26,18 +26,22 @@ class Spotlite:
         self.last_wallpaper = self.fetch_last_wallpaper()
 
     def fetch_last_wallpaper(self):
-        last_wallpaper = sorted(
-            filter(
-                lambda x: x.startswith(self.prefix),
-                listdir(DESTINATION_DIRECTORY)
-            ),
-            reverse=True
-        )[0]
-        return path.join(DESTINATION_DIRECTORY, last_wallpaper)
+        try:
+            last_wallpaper = sorted(
+                filter(
+                    lambda x: x.startswith(self.prefix),
+                    listdir(DESTINATION_DIRECTORY)
+                ),
+                reverse=True
+            )[0]
+            return path.join(DESTINATION_DIRECTORY, last_wallpaper)
+        except IndexError:
+            return None
 
     def fetch_current_wallpaper(self):
         try:
-            self.check_duplicate()
+            if self.last_wallpaper:
+                self.check_duplicate()
             output = self.generate_output_filename()
             copy2(SOURCE_FILE, output)
             INFO(f'Wallpaper copied: "[blue]{path.basename(output)}[/blue]"')
